@@ -6,8 +6,11 @@ import resetPage from "./resetPge";
 const getWeatherData = async (e) => {
   resetPage();
   const cityName = cityInput.value;
-  const weatherData = await loadWeatherData(cityName);
 
+  const loading = document.querySelector(".loading");
+  loading.style.display = "block";
+  const weatherData = await loadWeatherData(cityName);
+  loading.style.display = "none";
   console.log(weatherData);
   const weatherCard = getWeatherCard(weatherData);
   weatherInfo.appendChild(weatherCard);

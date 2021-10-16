@@ -5,6 +5,7 @@ const getWeatherCard = (weatherObj) => {
     const container = document.querySelector(".container");
     container.style.backgroundImage = `url(./images/${weatherObj.weather[0].main}.jpg)`;
     container.style.backgroundSize = "cover";
+    container.style.backgroundRepeat = "no";
   };
 
   const getWindDirection = () => {
