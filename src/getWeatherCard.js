@@ -3,7 +3,7 @@ const getWeatherCard = (weatherObj) => {
   weatherCard.classList.add("weather-card");
   const setBackground = () => {
     const container = document.querySelector(".container");
-    container.style.backgroundImage = `url(../src/images/${weatherObj.weather[0].main}.jpg)`;
+    container.style.backgroundImage = `url(./images/${weatherObj.weather[0].main}.jpg)`;
     container.style.backgroundSize = "cover";
   };
 
